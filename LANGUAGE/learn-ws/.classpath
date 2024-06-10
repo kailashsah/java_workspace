@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="datastructures"/>
 	<classpathentry kind="src" path="multithreading"/>
+	<classpathentry kind="src" path="corelang"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
