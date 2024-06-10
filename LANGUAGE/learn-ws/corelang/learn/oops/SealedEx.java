@@ -1,26 +1,27 @@
 package learn.oops;
 
 /*
- 	1.  
- 
+ 	1.
+
 */
 public class SealedEx {
 	public void Run() {
-		int seats;
+		int seats = 0;
 		Vehicle vehicle = new Car(2, "a");
 		if (vehicle instanceof Car) {
 			seats = ((Car) vehicle).getNumberOfSeats();
 		} else if (vehicle instanceof Truck) {
 			seats = ((Truck) vehicle).getLoadCapacity();
 		} else {
-			throw new RuntimeException("Unknown instance of Vehicle");
+			throw new RuntimeException("Unknown instance of Vehicle" + seats);
 		}
+		System.out.println(seats);
 	}
 
-	static void main(String[] args) {
-		new SealedEx().Run();
-	}    
- 
+//	public static void main(String[] args) {
+//		new SealedEx().Run();  
+//	}
+
 }
 
 sealed interface Service permits Car, Truck {
