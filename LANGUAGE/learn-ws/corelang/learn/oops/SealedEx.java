@@ -8,8 +8,12 @@ public class SealedEx {
 	public void Run() {
 		int seats = 0;
 		Vehicle vehicle = new Car(2, "a");
-		if (vehicle instanceof Car) {
+		if (vehicle instanceof Car car) {
+
 			seats = ((Car) vehicle).getNumberOfSeats();
+			// 2.
+			car.getNumberOfSeats();
+
 		} else if (vehicle instanceof Truck) {
 			seats = ((Truck) vehicle).getLoadCapacity();
 		} else {
