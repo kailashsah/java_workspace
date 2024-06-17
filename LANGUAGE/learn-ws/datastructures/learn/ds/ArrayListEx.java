@@ -1,6 +1,7 @@
 package learn.ds;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 /*
   1. 
@@ -21,6 +22,8 @@ public class ArrayListEx {
 		list.add("ajay");
 		list.add("ravi");
 //		list.forEach((n)-> StringUtilss.printt(n));// ok
+		System.out.println("ctor ");
+		Consumer<Integer> method = (n) -> { System.out.println(n); };
 	}
 	
 	public void print(List listobj) {
@@ -77,18 +80,20 @@ public class ArrayListEx {
 //		list.clear(); // removes all elements
 		listt.ensureCapacity(10); // increases the capacity
 //		list.sort(null); // ajay, ravi, vijay, 
+		listt.set(0, null);
+		listt.trimToSize();
 
 		System.out.println();
 		print(listt);
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		var thisClass = new ArrayListEx();
-		thisClass.runOne();
-		thisClass.run();
-
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		var thisClass = new ArrayListEx();
+//		thisClass.runOne();
+//		thisClass.run();
+//
+//	}
 	static class StringUtilss {
 		public static void printt(String str) {
 			System.out.print(str + ", ");
