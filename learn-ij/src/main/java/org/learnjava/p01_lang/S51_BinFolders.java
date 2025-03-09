@@ -73,7 +73,7 @@ class Folders {
     }
 }
 
-public class S500_BinFolders {
+public class S51_BinFolders {
     public static void main(String[] args) {
         System.out.println("main starts");
 

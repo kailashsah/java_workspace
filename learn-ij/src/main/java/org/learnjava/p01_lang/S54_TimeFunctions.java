@@ -28,7 +28,7 @@ class TimeFunctions
         System.out.println("Current time in milliseconds: " + currentTime);
     }
 }
-public class S503_TimeFunctions {
+public class S54_TimeFunctions {
     public static void main(String[] args) {
         System.out.println("main starts");
 

@@ -39,7 +39,7 @@ class StringFunctions {
     }
 }
 
-public class S104_StringFunctions {
+public class S14_StringFunctions {
     public void basicFunctions() {
         String str = "Hello World";
         System.out.println("Length of the string: " + str.length());

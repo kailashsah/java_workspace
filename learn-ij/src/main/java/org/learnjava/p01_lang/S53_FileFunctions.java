@@ -28,7 +28,7 @@ class FileFunctions {
     }
 }
 
-public class S501_FileFunctions {
+public class S53_FileFunctions {
     public static void main(String[] args) throws IOException {
         FileFunctions ff = new FileFunctions();
         ff.readFileResource();

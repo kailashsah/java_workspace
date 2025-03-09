@@ -28,17 +28,17 @@ class Customer {
 
 public class SynchronizedMethodsEx {
     public static void main(String args[]) {
-        final Customer c = new Customer();
+        final Customer customer = new Customer();
 
         new Thread() {
             public void run() {
-                c.withdraw(15000);
+                customer.withdraw(15000);
             }
         }.start();
 
         new Thread() {
             public void run() {
-                c.deposit(10000);
+                customer.deposit(10000);
             }
         }.start();
 

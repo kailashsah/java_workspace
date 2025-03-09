@@ -7,7 +7,7 @@ class MyException extends java.lang.Exception{
 }
 
 
-public class S201_Exception {
+public class S21_Exception {
     public static void main(String [] args)
     {
         try {
