@@ -1,4 +1,4 @@
-package org.learnjava;
+package org.learnjava.p01_lang;
 
 class MyException extends java.lang.Exception{
     public MyException(String message) {

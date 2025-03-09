@@ -1,15 +1,14 @@
-package org.learnjava;
+package org.learnjava.p01_lang;
 
-class StringFunctions
-{
+class StringFunctions {
     public void basicFunctions() {
         String str = "Hello World";
         System.out.println("Length of the string: " + str.length());
         System.out.println("Character at index 1: " + str.charAt(1));
         System.out.println("Substring from index 1 to 4: " + str.substring(1, 4));
     }
-    public void nullStringCrashesAtEquals()
-    {
+
+    public void nullStringCrashesAtEquals() {
         // null str crashes at equal
         String str = " ";
         String str1 = null;
@@ -19,8 +18,7 @@ class StringFunctions
             System.out.println("equal");
     }
 
-    public void nullStringPrintsNull()
-    {
+    public void nullStringPrintsNull() {
         String str = "abc";
         String str1 = null;
         str += str1;
@@ -40,7 +38,15 @@ class StringFunctions
         return textValue;
     }
 }
+
 public class S104_StringFunctions {
+    public void basicFunctions() {
+        String str = "Hello World";
+        System.out.println("Length of the string: " + str.length());
+        System.out.println("Character at index 1: " + str.charAt(1));
+        System.out.println("Substring from index 1 to 4: " + str.substring(1, 4));
+    }
+
     public static void main(String[] args) {
 
         StringFunctions sf = new StringFunctions();

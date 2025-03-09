@@ -1,4 +1,4 @@
-package org.learnjava;
+package org.learnjava.p01_lang;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

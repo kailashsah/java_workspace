@@ -1,4 +1,4 @@
-package org.learnjava;
+package org.learnjava.p01_lang;
 
 public class S001_PracticeCode {
     public static void main(String[] args)  {
