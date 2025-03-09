@@ -1,0 +1,3 @@
+
+#build
+./gradelw.bat build

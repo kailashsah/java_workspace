@@ -10,8 +10,16 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+//    testImplementation platform('org.junit:junit-bom:5.10.0')
+//    testImplementation 'org.junit.jupiter:junit-jupiter' // required to run tests
+////    testCompileOnly( 'org.junit.jupiter:junit-jupiter')
+////    testCompileOnly group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+//    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+    testImplementation 'org.mockito:mockito-core:5.11.0'
 }
 
 test {
