@@ -28,6 +28,7 @@ public class ArrayListEx {
         };
     }
 
+
     public void print(List listobj) {
         //1.
 //		Iterator itr = listobj.iterator();
@@ -89,13 +90,28 @@ public class ArrayListEx {
         print(listt);
     }
 
-    //	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		var thisClass = new ArrayListEx();
-//		thisClass.runOne();
-//		thisClass.run();
-//
-//	}
+    public void checknullList()
+    {
+        ArrayList<String> listLocal = null;
+        for (String str : listLocal) //java.util.ArrayList.iterator() --> NullPointerException
+        {
+            if (str == null) {
+                System.out.println("null found");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        var thisClass = new ArrayListEx();
+        //1.
+        //thisClass.runOne();
+        //2.
+        //thisClass.run();
+        //3.
+        //thisClass.checknullList(); // NPE test
+
+    }
+
     static class StringUtilss {
         public static void printt(String str) {
             System.out.print(str + ", ");

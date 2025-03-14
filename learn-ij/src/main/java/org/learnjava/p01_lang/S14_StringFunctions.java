@@ -1,5 +1,7 @@
 package org.learnjava.p01_lang;
 
+import java.text.MessageFormat;
+
 class StringFunctions {
     public void basicFunctions() {
         String str = "Hello World";
@@ -25,7 +27,18 @@ class StringFunctions {
         System.out.println(str); // prints abcnull
 
     }
+    public  String returnString()
+    {
+        return null;
+    }
+    public void messageFormat()
+    {
+        String inString = returnString(); // if not assigned, MessageFormat error for null.
+        String msg;
+        msg = MessageFormat.format("string value {0}", inString);
 
+        System.out.println(msg);
+    }
     String removeEscapes(String textValue) {
         textValue = textValue.replaceAll("\n", "");
         textValue = textValue.replaceAll("\t", "");
@@ -49,8 +62,11 @@ public class S14_StringFunctions {
 
     public static void main(String[] args) {
 
+        System.out.println(" main starts ");
+
         StringFunctions sf = new StringFunctions();
-        sf.nullStringPrintsNull();
+        //sf.nullStringPrintsNull();
+        sf.messageFormat();
 
     }
 }
