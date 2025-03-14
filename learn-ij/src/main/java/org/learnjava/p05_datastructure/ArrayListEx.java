@@ -21,8 +21,8 @@ public class ArrayListEx {
         list.add("vijay");
         list.add("ajay");
         list.add("ravi");
-//		list.forEach((n)-> StringUtilss.printt(n));// ok
-        System.out.println("ctor ");
+        list.forEach((n) -> StringUtilss.printt(n));// ok
+        //System.out.println("ctor ");
         Consumer<Integer> method = (n) -> {
             System.out.println(n);
         };
@@ -31,23 +31,23 @@ public class ArrayListEx {
 
     public void print(List listobj) {
         //1.
-//		Iterator itr = listobj.iterator();
-//		while (itr.hasNext()) {
-//			System.out.print(itr.next() + ", ");
-//		}
+        //Iterator itr = listobj.iterator();
+        //while (itr.hasNext()) {
+        //	System.out.print(itr.next() + ", ");
+        //}
 
         //2.
-//		listobj.forEach((n) -> System.out.print(n + ", "));//ok
-
+        listobj.forEach((n) -> System.out.print(n + ", "));//ok
+        //
         //3.
         listobj.forEach((Object n) -> StringUtilss.printt((String) n)); // giving error
-//		listobj.forEach( StringUtilss::printt);
-//		StringUtils.print(" ");
+        //listobj.forEach( StringUtilss::printt);
+        //StringUtils.print(" ");
     }
 
     public void runOne() {
         // 1.
-//		ArrayList<String> listt = (ArrayList) list.clone(); // swallow copy
+        //ArrayList<String> listt = (ArrayList) list.clone(); // swallow copy
         // 2.
         ArrayList<String> listt = new ArrayList<>();
         listt.addAll(this.list);
@@ -63,26 +63,26 @@ public class ArrayListEx {
     }
 
     public void run() {
-//		ArrayList<String> list = this.list;//reference assignment
-//		ArrayList<String> list = (ArrayList) this.list.clone();
+        //ArrayList<String> list = this.list;//reference assignment
+        //ArrayList<String> list = (ArrayList) this.list.clone();
 
         ArrayList<String> listt = new ArrayList<>();
         listt.addAll(this.list);// deep copy
         // 1.
-//		list.add(10, "xx"); // error: size if 4 so exception, IndexOutOfBoundsException(outOfBoundsMsg(index));
+        //list.add(10, "xx"); // error: size if 4 so exception, IndexOutOfBoundsException(outOfBoundsMsg(index));
 
         // 2.
-//		listt.remove(0);// removed 'ravi'
+        //listt.remove(0);// removed 'ravi'
 
         // 3.
-//		list.removeAll(list); // required to give collection in arg.
+        //list.removeAll(list); // required to give collection in arg.
 
         // 4. other useful methods
         listt.size();
         boolean isExist = listt.contains("vijay");
-//		list.clear(); // removes all elements
+        //list.clear(); // removes all elements
         listt.ensureCapacity(10); // increases the capacity
-//		list.sort(null); // ajay, ravi, vijay, 
+        //list.sort(null); // ajay, ravi, vijay,
         listt.set(0, null);
         listt.trimToSize();
 
@@ -90,8 +90,7 @@ public class ArrayListEx {
         print(listt);
     }
 
-    public void checknullList()
-    {
+    public void checknullList() {
         ArrayList<String> listLocal = null;
         for (String str : listLocal) //java.util.ArrayList.iterator() --> NullPointerException
         {
@@ -100,6 +99,7 @@ public class ArrayListEx {
             }
         }
     }
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         var thisClass = new ArrayListEx();
