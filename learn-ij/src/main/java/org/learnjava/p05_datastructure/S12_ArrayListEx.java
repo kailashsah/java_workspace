@@ -11,18 +11,18 @@ import java.util.function.Consumer;
   
 */
 
-public class ArrayListEx {
-    ArrayList<String> list = null;
+public class S12_ArrayListEx {
+    ArrayList<String> arrList = null;
 
-    public ArrayListEx() {
+    public S12_ArrayListEx() {
         super();
-        list = new ArrayList<String>();
-        list.add("ravi");
-        list.add("vijay");
-        list.add("ajay");
-        list.add("ravi");
-        list.forEach((n) -> StringUtilss.printt(n));// ok
-        //System.out.println("ctor ");
+        arrList = new ArrayList<String>();
+        arrList.add("ravi");
+        arrList.add("vijay");
+        arrList.add("ajay");
+        arrList.add("ravi");
+        arrList.forEach((n) -> StringUtilss.printt(n));// ok
+
         Consumer<Integer> method = (n) -> {
             System.out.println(n);
         };
@@ -50,7 +50,7 @@ public class ArrayListEx {
         //ArrayList<String> listt = (ArrayList) list.clone(); // swallow copy
         // 2.
         ArrayList<String> listt = new ArrayList<>();
-        listt.addAll(this.list);
+        listt.addAll(this.arrList);
 
         // remove first
         listt.remove(0);
@@ -67,7 +67,7 @@ public class ArrayListEx {
         //ArrayList<String> list = (ArrayList) this.list.clone();
 
         ArrayList<String> listt = new ArrayList<>();
-        listt.addAll(this.list);// deep copy
+        listt.addAll(this.arrList);// deep copy
         // 1.
         //list.add(10, "xx"); // error: size if 4 so exception, IndexOutOfBoundsException(outOfBoundsMsg(index));
 
@@ -102,7 +102,7 @@ public class ArrayListEx {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        var thisClass = new ArrayListEx();
+        var thisClass = new S12_ArrayListEx();
         //1.
         //thisClass.runOne();
         //2.
