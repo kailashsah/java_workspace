@@ -6,6 +6,8 @@ import java.time.format.FormatStyle;
 
 class TimeFunctions {
     public void ZonedTime() {
+        //method -  system default zone
+
         Instant now = Instant.now();
 
         // convert Instant to ZonedDateTime
@@ -15,12 +17,15 @@ class TimeFunctions {
     }
 
     public void localTime() {
+        //method - SHORT format style
+
         LocalDateTime dateTime = LocalDateTime.now();
         String localTime = dateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT));
         System.out.println(localTime); //09/03/25, 12:18 pm
     }
 
     public void epochToLocalDateTime() {
+        //method - epoch to local date time, primarily used to store time in long format
 
         //1. setup start time
         long epochSecond = Instant.now().getEpochSecond();
@@ -46,9 +51,26 @@ class TimeFunctions {
 
     }
 
-    public void basicFunctions() {
+    public void currentTimeMillis() {
+
+        //retuns the difference, measured in milliseconds, between the current time and midnight, January 1, 1970 UTC.
         long currentTime = System.currentTimeMillis();
         System.out.println("Current time in milliseconds: " + currentTime);
+    }
+
+    public void datetimeFomatterPattern() {
+        //method- use of ofPattern() to format date time.
+
+        //1. %m is the windows sdk format
+        String str = "%m'aaa'%d%y"; // month/date/year  11%17%2025
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(str);
+        System.out.println(dtf.format(LocalDateTime.now())); //%2aaa%21%2025
+
+        //2. MM is java format
+        DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("MM 'afff'");
+        System.out.println(dtf1.format(LocalDateTime.now()));
+
+
     }
 }
 
@@ -59,8 +81,8 @@ public class S54_TimeFunctions {
         TimeFunctions tf = new TimeFunctions();
         //tf.ZonedTime();
         //tf.localTime();
-        tf.epochToLocalDateTime();
-
+        //tf.epochToLocalDateTime();
+        tf.datetimeFomatterPattern();
 
         System.out.println("main ends");
     }
