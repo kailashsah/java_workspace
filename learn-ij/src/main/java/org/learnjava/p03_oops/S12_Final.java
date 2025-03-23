@@ -18,7 +18,7 @@ public class S12_Final {
     final static Integer INT2 = Integer.valueOf(2);
     static final Integer INT5 = Integer.valueOf(2); //use static,final in any order
     final Integer int3;
-    final Integer int4 = new Integer(4);
+    //final Integer int4 = new Integer(4); //Integer(int) in Integer has been deprecated and marked for removal
 
     public S12_Final() {
 

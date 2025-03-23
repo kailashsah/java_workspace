@@ -4,6 +4,7 @@ package org.learnjava.p03_oops;
 /*
     1. upcasting and downcasting
     2. same method could be defined again in the subclass without @Override annotation
+    3. class B extends A, C -> not possible in java extending mutiple classes
 */
 
 class A {
