@@ -8,8 +8,14 @@ import java.time.format.DateTimeFormatter;
 */
 
 public class S55_DateTimeFormatterUtil {
+
+    /*
+    * strftime()
+    * implementation equals to Microsoft strftime
+    * %a  returns as month like 03 for march.
+    * */
     public static String strftime(String str) {
-        // implementation equals to Microsoft strftime
+        //
 
         StringBuilder sb = new StringBuilder();
         boolean isPercent = false;
@@ -33,6 +39,9 @@ public class S55_DateTimeFormatterUtil {
                         break;
                     case 'y':
                         sb.append("YYYY"); // year
+                        break;
+                    case 'a':
+                        sb.append("E"); // year
                         break;
                     default:
                         break;
@@ -60,6 +69,12 @@ public class S55_DateTimeFormatterUtil {
 
     }
 
+    /*
+    * formatDateTimeSpecification() - Format a date-time specification string.
+    * pIn = "#%a %m%d%y#.dat";
+    * pOut = 03212025.dat
+    *
+    * */
     public static int formatDateTimeSpecification(String pIn, StringBuilder pOut, int nMaxLen) {
         LocalDateTime now = LocalDateTime.now();
         nMaxLen--; // Adjust for trailing \0
@@ -120,11 +135,32 @@ public class S55_DateTimeFormatterUtil {
         return 0;
     }
 
-    public static void main(String[] args) {
+    void run() {
+
         StringBuilder pOut = new StringBuilder();
 
         // POSITVE CASES
-        String pIn = "#%m%d%y#.dat"; //03212025.dat
+        String pIn = "#%a %m%d%y#.dat"; //03212025.dat
+        //String pIn = "#%a#.dat"; //Wed.dat
+        /*
+            %a --> Wed
+            %A --> Wednesday
+
+            %b --> Mar
+            %B --> March
+
+            %c --> Wed Mar 26 13:16:37 2025  -- date time rep  (by locale)
+            %d --> 26 day in a month
+
+            %H --> 13 hour in 24-hour format  (13)
+            %I --> 01 hour in 12-hour format  (01)
+
+            %j --> 085 day of the year
+            %m --> 03 month in a year
+            %M --> 16 minute in an hour
+
+
+        */
         //String pIn = "#%maaa%d%y#"; // 03aaa192025
         //String pIn = "#%m#.dat"; // 03.dat
         //String pIn = "#%m%d%y##%m%d%y#.dat"; //0320202503202025.dat
@@ -135,7 +171,6 @@ public class S55_DateTimeFormatterUtil {
         //String pIn = "##%m#.dat"; // #%m#.dat
 
 
-
         int nMaxLen = 100;
 
         int result = formatDateTimeSpecification(pIn, pOut, nMaxLen);
@@ -144,5 +179,10 @@ public class S55_DateTimeFormatterUtil {
         } else {
             System.out.println("Error formatting date-time.");
         }
+    }
+
+    public static void main(String[] args) {
+        new S55_DateTimeFormatterUtil().run();
+
     }
 }
