@@ -32,6 +32,7 @@ class TimeFunctions {
         //LocalDateTime dt = new LocalDateTime(Instant.ofEpochSecond(epochSecond), ZoneId.systemDefault());
         //ctor is private, so use below
 
+        // create dateTime object from epoch second
         LocalDateTime dt = Instant.ofEpochSecond(epochSecond).atZone(ZoneId.systemDefault()).toLocalDateTime();
         String dateTime = dt.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
         System.out.println(dateTime);
@@ -64,7 +65,7 @@ class TimeFunctions {
         //1. %m is the windows sdk format
         String str = "%m'aaa'%d%y"; // month/date/year  11%17%2025
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern(str);
-        System.out.println(dtf.format(LocalDateTime.now())); //%2aaa%21%2025
+        System.out.println(dtf.format(LocalDateTime.now())); //%2aaa%21%2025 // not working, expected output is different, use below format.
 
         //2. MM is java format
         DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("MM 'afff'");

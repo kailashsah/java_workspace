@@ -41,7 +41,7 @@ class StringFunctions {
         }
     }
 
-    public void findSubstringsTwo() {
+    public void findSubstringsUsingSplit() {
         System.out.println("findSubstringsTwo");
 
         //find substring
@@ -115,7 +115,7 @@ public class S14_StringFunctions {
         sf.findSubstrings();
         System.out.println();
 
-        sf.findSubstringsTwo();
+        sf.findSubstringsUsingSplit();
 
     }
 }

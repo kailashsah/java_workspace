@@ -7,7 +7,10 @@ import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Date;
 
-
+/*
+    1. trying other libraries for date time formatting
+    2. joda, apache commons lang3
+*/
 public class S57_OtherDateTimeUtilities {
     public void usingJodaTimeLibrary() {
         //1.Format for output
