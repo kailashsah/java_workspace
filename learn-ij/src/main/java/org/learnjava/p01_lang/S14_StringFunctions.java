@@ -16,7 +16,13 @@ class StringFunctions {
         }
     }
 
+    /*
+    * find substring between delimiter (e.g, Hello). Parse the entire string.
+    *
+    * */
     public void findSubstrings() {
+        System.out.println("findSubstrings");
+
         //find substring
         String str1 = "Hello World Hello War Hello";
         int index = 0;
@@ -28,6 +34,7 @@ class StringFunctions {
                 prev = index;
 
             } else {
+                //if first word is hello, then find the next one.
                 index += "Hello".length();
                 prev = index;
             }
@@ -35,6 +42,8 @@ class StringFunctions {
     }
 
     public void findSubstringsTwo() {
+        System.out.println("findSubstringsTwo");
+
         //find substring
         String str1 = "Hello World Hello War Hello";
         String[] strings = str1.split("Hello");
@@ -103,7 +112,9 @@ public class S14_StringFunctions {
         //sf.basicFunctions();
         //sf.messageFormat();
 
-        //sf.findSubstrings();
+        sf.findSubstrings();
+        System.out.println();
+
         sf.findSubstringsTwo();
 
     }
