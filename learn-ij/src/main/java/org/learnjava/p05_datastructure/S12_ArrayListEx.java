@@ -90,6 +90,19 @@ public class S12_ArrayListEx {
         print(listt);
     }
 
+    public void runThree()
+    {
+        //to check whether collection can able to iterate in for each loop
+        Collection<String> collection = new ArrayList<>();
+        collection.add("A");
+        collection.add("B");
+        collection.add("C");
+
+        for (String str : collection) {
+            System.out.println(str);
+        }
+    }
+
     public void checknullList() {
         ArrayList<String> listLocal = null;
         for (String str : listLocal) //java.util.ArrayList.iterator() --> NullPointerException
@@ -109,6 +122,9 @@ public class S12_ArrayListEx {
         //thisClass.run();
         //3.
         //thisClass.checknullList(); // NPE test
+        //4.
+        System.out.println();
+        thisClass.runThree();
 
     }
 
