@@ -1,5 +1,7 @@
 package org.learnjava.p05_datastructure;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -31,18 +33,24 @@ public class S12_ArrayListEx {
 
     public void print(List listobj) {
         //1.
-        //Iterator itr = listobj.iterator();
-        //while (itr.hasNext()) {
-        //	System.out.print(itr.next() + ", ");
-        //}
+        System.out.println("using iterator");
+        Iterator itr = listobj.iterator();
+        while (itr.hasNext()) {
+        	System.out.print(itr.next() + ", ");
+        }
+        System.out.println("\n");
 
         //2.
+        System.out.println("using System.out.print");
         listobj.forEach((n) -> System.out.print(n + ", "));//ok
+        System.out.println("\n");
         //
         //3.
-        listobj.forEach((Object n) -> StringUtilss.printt((String) n)); // giving error
-        //listobj.forEach( StringUtilss::printt);
-        //StringUtils.print(" ");
+        System.out.println("using printt");
+        listobj.forEach((Object n) -> StringUtilss.printt((String) n));
+        System.out.println("\n");
+        //listobj.forEach( StringUtilss::printt); //Object is not convertible to String
+
     }
 
     public void runOne() {
@@ -123,8 +131,8 @@ public class S12_ArrayListEx {
         //3.
         //thisClass.checknullList(); // NPE test
         //4.
-        System.out.println();
-        thisClass.runThree();
+        //System.out.println();
+        //thisClass.runThree();
 
     }
 
